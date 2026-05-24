@@ -1,0 +1,48 @@
+{
+  "name": "twitterapiio",
+  "version": "0.0.1",
+  "description": "TypeScript SDK for twitterapi.io generated with Hey API",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "generate": "openapi-ts --file openapi-ts.config.mjs",
+    "refresh-spec": "curl -sS -o openapi.json https://twitterapi.io/openapi.json",
+    "build": "tsc --project tsconfig.json",
+    "prepack": "npm run generate && npm run build",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petrbela/twitterapiio-node.git"
+  },
+  "keywords": [
+    "twitter",
+    "twitterapi",
+    "sdk",
+    "openapi",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petrbela/twitterapiio-node/issues"
+  },
+  "homepage": "https://github.com/petrbela/twitterapiio-node#readme",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "devDependencies": {
+    "@hey-api/openapi-ts": "^0.97.2",
+    "typescript": "^6.0.3"
+  }
+}

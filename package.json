@@ -16,6 +16,7 @@
   ],
   "scripts": {
     "generate": "openapi-ts --file openapi-ts.config.mjs",
+    "refresh-spec": "curl -sS -o openapi.json https://twitterapi.io/openapi.json",
     "build": "tsc --project tsconfig.json",
     "prepack": "npm run generate && npm run build",
     "test": "node --test"
@@ -37,6 +38,9 @@
     "url": "https://github.com/petrbela/twitterapiio-sdk/issues"
   },
   "homepage": "https://github.com/petrbela/twitterapiio-sdk#readme",
+  "engines": {
+    "node": ">=22.13.0"
+  },
   "devDependencies": {
     "@hey-api/openapi-ts": "^0.97.2",
     "typescript": "^6.0.3"

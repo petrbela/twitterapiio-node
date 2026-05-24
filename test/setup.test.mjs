@@ -13,7 +13,7 @@ test('package is configured for npm package twitterapiio', () => {
 });
 
 test('Hey API generation uses the twitterapi.io OpenAPI source', () => {
-  assert.equal(openapiTsConfig.input, 'https://twitterapi.io/openapi.json');
+  assert.equal(openapiTsConfig.input, 'openapi.json');
   assert.equal(openapiTsConfig.output, 'src');
-  assert.equal(openapiTsConfig.client, 'fetch');
+  assert.ok(openapiTsConfig.plugins.includes('@hey-api/client-fetch'));
 });

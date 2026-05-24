@@ -1,6 +1,6 @@
 {
   "name": "twitterapiio",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "TypeScript SDK for twitterapi.io generated with Hey API",
   "type": "module",
   "main": "./dist/index.js",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/petrbela/twitterapiio-sdk.git"
+    "url": "git+https://github.com/petrbela/twitterapiio-node.git"
   },
   "keywords": [
     "twitter",
@@ -35,9 +35,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/petrbela/twitterapiio-sdk/issues"
+    "url": "https://github.com/petrbela/twitterapiio-node/issues"
   },
-  "homepage": "https://github.com/petrbela/twitterapiio-sdk#readme",
+  "homepage": "https://github.com/petrbela/twitterapiio-node#readme",
   "engines": {
     "node": ">=22.13.0"
   },

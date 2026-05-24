@@ -19,6 +19,8 @@ jobs:
           node-version: '22'
           registry-url: 'https://registry.npmjs.org'
 
+      - run: npm install -g npm@11.5.1
+
       - run: npm ci
       - run: npm run generate
       - run: npm run build
@@ -34,5 +36,3 @@ jobs:
           fi
 
       - run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

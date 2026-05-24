@@ -44,3 +44,14 @@ npm run refresh-spec
 ```
 
 Then re-run `npm run generate` and review the diff before committing.
+
+## Publishing
+
+Publishing is fully automated via GitHub Actions on `v*` tag pushes. Do **not** run `npm publish` locally.
+
+```bash
+npm version patch                    # bumps package.json, commits, creates tag e.g. v0.0.2
+git push origin main --follow-tags   # pushes commit + tag → triggers publish.yml
+```
+
+The workflow runs `npm ci` → `generate` → `build` → `test` → verifies the tag matches `package.json` version → `npm publish --provenance --access public`, authenticated via OIDC Trusted Publishing (no long-lived secrets required).

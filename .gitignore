@@ -2,3 +2,4 @@ node_modules/
 dist/
 src/
 openapi-ts-error-*.log
+*.tgz
